@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+
+  <!-- Exercise Header JS Code -->
+    <script>
+      /*
+      ============================================
+      ; Title: Exercise 4.2
+      ; Author: Professor Krasso
+      ; Date: 11 March 2019
+      ; Modified By: Aaron R. Wilson
+      ; Description: Working w/ Ajax & JQuery.
+      ;===========================================
+      */
+
+      // Create a header variable to point to the location of the header file.
+      const header = require('../header.js');
+
+      // Output to the console the header info.
+      console.log(`${header.display('Aaron', 'Wilson', 'Exercise 4.2')}\n`);
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery reference -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap 4 link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Exercise 4.2</title>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <h4>HTTP GET Request</h4><br><br>
+
+    <button type="button" class="btn btn-primary" id="dog-breed">Get Random Dog Breed</button>
+
+    <script>
+
+        // Build a JQuery function that.
+        $(function() {
+          $('#dog-breed').click(function () {
+            $.get("https://dog.ceo/api/breeds/image/random", function (data, status) {
+              console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status);
+            });
+          });
+        });
+
+    </script>
+
+    <script src="" async defer></script>
+  </body>
+</html>

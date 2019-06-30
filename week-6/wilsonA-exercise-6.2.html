@@ -1,0 +1,107 @@
+<!--
+/*
+============================================
+; Title: wilsonA-exercise-6.2.html
+; Author: Professor Krasso
+; Date: 29 March 2019
+; Modified By: Aaron Wilson
+; Description: Knockout PersonViewModel.
+;===========================================
+*/
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Exercise 6.2</title>
+
+    <!-- JavaScript Libraries -->
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <!-- AJAX & Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- Knockout -->
+    <script src="../knockout-3.5.0.js"></script>
+
+    <!-- JavaScript Bootstrap 4 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Stylesheet - Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+
+      <!-- Bootstrap 4 - Navigation -->
+      <nav class="navbar navbar-expand-sm bg-dark navbar-primary">
+          <ul class="navbar-nav">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+              </li>
+          </ul>
+      </nav>
+
+      <div role="main" class="container">
+
+          <br /><br />
+
+          <h2>Knockout PersonViewModel Example 6.2</h2>
+
+          <!-- Bootstrap 4 - Form -->
+          <form>
+
+              <div class="form-group">
+
+                  <label for="txtFirstName">First Name: </label>
+                  <input type="text" class="form-control alert-warning" data-bind="value: firstName" id="txtFirstName">
+              </div>
+
+              <div class="form-group">
+
+                  <label for="txtLastName">Last Name: </label>
+                  <input type="text" class="form-control alert-warning"  data-bind="value: lastName" id="txtLastName">
+              </div>
+
+              <div class="form-group">
+
+                  <label for="txtEmail">Email: </label>
+                  <input type="text" class="form-control alert-warning" data-bind="value: email" id="txtEmail">
+              </div>
+          </form>
+      </div>
+    <script>
+
+      // Build the constructor function.
+      function PersonViewModel() {
+
+        // Add the properties.
+        this.firstName = ko.observable('Aaron');
+        this.lastName = ko.observable('Wilson');
+        this.email = ko.observable('arwilson@my360.bellevue.edu');
+      }
+
+      // Initialize the apply bindings method to add a new PersonViewModel.
+      ko.applyBindings(new PersonViewModel());
+    </script>
+  </body>
+</html>

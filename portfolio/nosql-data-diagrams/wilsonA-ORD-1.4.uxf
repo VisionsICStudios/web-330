@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>70</y>
+      <w>590</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>A CUSTOMER can have many INVOICES
+
+{
+    _id: 010971,
+    first_name:"Jenifer",
+    last_name: "Murray",
+    date_of_birth: "10-13-1985",
+    user_name: "JenMurr1013",
+
+    invoices: [
+
+     {_id: 014952, date_created: "05-17-2017", date_shipped: "05-21-2017", subtotal: 23.67, tax: 3.45, total: 27.12 },
+     {_id: 014952, date_created: "05-17-2017", date_shipped: "05-21-2017", subtotal: 23.67, tax: 3.45, total: 27.12 },
+     {_id: 014952, date_created: "05-17-2017", date_shipped: "05-21-2017", subtotal: 23.67, tax: 3.45, total: 27.12 },
+     {_id: 014952, date_created: "05-17-2017", date_shipped: "05-21-2017", subtotal: 23.67, tax: 3.45, total: 27.12 },
+  ]
+}
+valign=top
+halign=left
+fontsize=10
+
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>20</y>
+      <w>710</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>NodeShopper ORD Data Structure
+halign=center
+valign=center
+fontsize=12
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

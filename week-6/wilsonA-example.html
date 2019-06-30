@@ -1,0 +1,122 @@
+<!--
+/*
+============================================
+; Title: wilsonA-exercise-6.2.html
+; Author: Professor Krasso
+; Date: 29 March 2019
+; Modified By: Aaron Wilson
+; Description: Knockout PersonViewModel
+; Object Literal.
+;===========================================
+*/
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>JSIICrew Trivia Quiz</title>
+
+    <!-- JavaScript Libraries -->
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <!-- AJAX & Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- Knockout -->
+    <script src="../knockout-3.5.0.js"></script>
+
+    <!-- JavaScript Bootstrap 4 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Stylesheet - Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+
+      <!-- Bootstrap 4 - Navigation -->
+      <nav class="navbar navbar-expand-sm bg-dark navbar-primary">
+          <h1 data-bind="text: title" style="color: white;"></h1>
+      </nav>
+
+      <div role="main" class="container">
+
+          <div id="q1">
+
+              <h1 data-bind="text: qOne" style="color: white;"></h1>
+
+              <br/><br/>
+              <h2>What tool can be used to log JavaScript information?</h2>
+              <br/><br/>
+              <p>A. <strong data-bind="text: q1ChoiceA"></strong></p>
+              <p>B. <strong data-bind="text: q1ChoiceB"></strong></p>
+              <p>C. <strong data-bind="text: q1ChoiceC"></strong></p>
+              <p>D. <strong data-bind="text: q1ChoiceD"></strong></p>
+
+              <a href="#" class="previous">&laquo; Previous</a>
+              <a href="#" class="next">Next &raquo;</a>
+          </div>
+
+          <div id="q2">
+
+              <h1 data-bind="text: qTwo" style="color: white;"></h1>
+
+              <br/><br/>
+              <h2>What operator can be used to compare if two values are equal in JavaScript?</h2>
+              <br/><br/>
+              <p>A. <strong data-bind="text: q2ChoiceA"></strong></p>
+              <p>B. <strong data-bind="text: q2ChoiceB"></strong></p>
+              <p>C. <strong data-bind="text: q2ChoiceC"></strong></p>
+              <p>D. <strong data-bind="text: q2ChoiceD"></strong></p>
+
+              <a href="#" class="previous" id="q2Prev">&laquo; Previous</a>
+              <a href="#" class="next" id="q2Next">Next &raquo;</a>
+          </div>
+
+          <div id="q3">
+
+              <h1 data-bind="text: qThree" style="color: white;"></h1>
+              <br/><br/>
+              <h2>How can JavaScript test if a case matches and perform an action based on that match?</h2>
+              <br/><br/>
+              <p>A. <strong data-bind="text: q3ChoiceA"></strong></p>
+              <p>B. <strong data-bind="text: q3ChoiceB"></strong></p>
+              <p>C. <strong data-bind="text: q3ChoiceC"></strong></p>
+              <p>D. <strong data-bind="text: q3ChoiceD"></strong></p>
+
+              <a href="#" class="previous" id="q3Prev">&laquo; Previous</a>
+              <a href="#" class="next" id="q3Next">Next &raquo;</a>
+          </div>
+
+          <div id="q4">
+              <br/><br/>
+              <h2>What object can hold a collection of information in JavaScript?</h2>
+              <br/><br/>
+              <p>A. <strong data-bind="text: q4ChoiceA"></strong></p>
+              <p>B. <strong data-bind="text: q4ChoiceB"></strong></p>
+              <p>C. <strong data-bind="text: q4ChoiceC"></strong></p>
+              <p>D. <strong data-bind="text: q4ChoiceD"></strong></p>
+
+              <a href="#" class="previous" id="q4Prev">&laquo; Previous</a>
+              <a href="#" class="next" id="q4Next">Next &raquo;</a>
+          </div>
+
+
+      </div>
+      
+      <script src="quiz.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise 5.2 - The Proxy Pattern</title>
+
+    <!-- Bootstrap 4 Library CSS & JavaScript -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- jquery Reference Library -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+
+      <!-- As a heading -->
+      <nav class="navbar navbar-light bg-primary">
+          <span class="navbar-brand mb-0 h1">WilsonA Exercise 5.2</span>
+      </nav>
+
+      <h1 id="myExample">
+          My JQuery Proxy Pattern Example
+      </h1>
+
+      <button id="btnProxy" class="btn btn-primary">Show Proxy</button>
+
+      <span id="proxyOutput">
+
+      </span>
+
+      <script>
+
+        /*
+        ============================================
+        ; Title: wilsonA-exercise-5.2
+        ; Author: Professor Krasso
+        ; Date: 22 March 2019
+        ; Modified By: Aaron R. Wilson
+        ; Description: Working w/ JQuery Proxy
+        ; Pattern.
+        ;===========================================
+        */
+
+        // Create a header variable to point to the location of the header file.
+        //const header = require('../header.js');
+
+        // Output to the console the header info.
+        //console.log(`${header.display('Aaron', 'Wilson', 'Exercise 5.2')}\n`);
+
+        // JQuery IIFE.
+        $(function() {
+
+          // Create a variable called character as an object with four properties, one being a method.
+          const character = {
+            name: 'Mickey',
+            type: 'mouse',
+            studio: 'Disney',
+            age: 91,
+
+            // Build a method property that outputs the desired HTML to the page.
+            output: function() {
+
+              // Clear the span tag HTML element.
+              $('#proxyOutput').html('');
+
+              // Append this content to the page.
+              $('#proxyOutput').append('<br/ ><br /> Can you believe that ' + this.name + ' the lovable ' + this.studio + ' ' + this.type + ' is ' + this.age + ' years old!');
+            }
+          };
+
+           // Use this button to execute the output.
+           $('#btnProxy').click($.proxy(character, 'output'));
+        });
+      </script>
+  </body>
+</html>

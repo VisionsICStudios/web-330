@@ -1,0 +1,124 @@
+<!--
+/*
+============================================
+; Title: wilsonA-exercise-7.3.html
+; Author: Professor Krasso
+; Date: 07 April 2019
+; Modified By: Aaron Wilson
+; Description: Knockout PersonViewModel
+; Bindings (foreach).
+;===========================================
+*/
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8" />
+
+        <meta title="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <title>WilsonA Exercise 7.3</title>
+
+        <!-- Stylesheet - Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
+
+        <!-- JavaScript Libraries -->
+        <script src="knockout-3.5.0.js"></script>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+            <ul class="navbar-nav">
+
+                <li class="nav-item active">
+
+                    <a class="nav-link" href="#">Home</a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="#">About</a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="#">Contact Us</a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <div role="main" class="container">
+
+            <br /><br />
+
+            <h2>Exercise 7.3 | The "foreach" binding</h2>
+
+            <table class="table table-dark table-striped table-hover " style="border: 2px solid #000; border-radius: 8px; margin: 20px 0 0 0">
+
+                  <thead>
+
+                      <tr style="background: AntiqueWhite ; color: #000">
+
+                          <th>Title</th>
+
+                          <th>Price</th>
+
+                      </tr>
+
+                    </thead>
+
+                    <tbody data-bind="foreach: textbooks">
+
+                      <tr>
+
+                          <td data-bind="text: title"></td>
+
+                          <td data-bind="text: price"></td>
+
+                      </tr>
+
+                  </tbody>
+
+              </table>
+
+              <br />
+
+          </div>
+
+          <script>
+
+              function TextbookViewModel() {
+
+                  this.textbooks = ko.observableArray([
+
+                      { title: "Understanding JavaScript", price: 39.99 },
+
+                      { title: "JavaScript, The Weird Parts", price: 69.99 },
+
+                      { title: "The JavaScript Definitive Guide", price: 49.49 },
+
+                      { title: "JS: The Language For The Future", price: 11.49 }
+                  ]);
+              }
+
+              ko.applyBindings(new TextbookViewModel());
+
+          </script>
+
+
+    </body>
+
+</html>
